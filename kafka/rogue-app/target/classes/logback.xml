@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+  <appender name="KAFKA"  class="net.eric.bigdata.kafka.appender.KafkaAppender">
+   <topic>mytopic</topic>
+   <zookeeperHost>storm:2181,storm1:2181,storm2:2181</zookeeperHost>
+   <brokerList>storm:9092,storm1:9092,storm2:9092</brokerList>
+   
+   	<formatter class="net.eric.bigdata.kafka.formatter.JsonFormatter">
+   		<expectJson>false</expectJson>
+   	</formatter>     
+  </appender>
+  
+  <root level="debug">
+    <appender-ref ref="KAFKA" />
+  </root>
+</configuration>
