@@ -14,6 +14,7 @@
 	<modules>
 		<module>word-count</module>
 		<module>upper-word</module>
+		<module>java-study</module>
 	</modules>
 
 	<dependencies>
